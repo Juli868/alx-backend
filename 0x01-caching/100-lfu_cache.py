@@ -8,4 +8,8 @@ class LFUCache(BaseCaching):
         pass
 
     def get(self, key):
-        pass
+        """Return the value associated with the provided key."""
+        for k,v in self.cache_data.items():
+            if k == key:
+                return v
+        return None
