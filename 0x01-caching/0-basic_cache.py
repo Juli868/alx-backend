@@ -4,7 +4,7 @@ from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
-    """."""
+    """Use basic cache algorithm."""
 
     def put(self, key, item):
         """Define the data dictionary."""
