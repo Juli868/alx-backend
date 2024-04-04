@@ -10,6 +10,7 @@ class BasicCache(BaseCaching):
         """Define the data dictionary."""
         if (key is not None or item is not None):
             self.cache_data[key] = item
+        return
 
     def get(self, key):
         """Return the data for the provided key."""
