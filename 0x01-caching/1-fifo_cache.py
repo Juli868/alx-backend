@@ -15,7 +15,7 @@ class FIFOCache(BaseCaching):
                 first_key = list(self.cache_data)[0]
                 print(f'DISCARD: {first_key}')
                 del self.cache_data[first_key]
-                length -=1
+                length -= 1
             return
 
     def get(self, key):
