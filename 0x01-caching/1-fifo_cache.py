@@ -9,12 +9,12 @@ class FIFOCache(BaseCaching):
     def put(self, key, item):
         """Add a new cache data to the dictionary."""
         if key is not None or item is not None:
+            self.cache_data[key] = item
             length = len(self.cache_data) 
             if (length > BaseCaching.MAX_ITEMS):
                 first_key = list(self.cache_data)[0]
                 print(f'DISCARD: {first_key}')
                 del self.cache_data[first_key]
-            self.cache_data[key] = item
             return
 
     def get(self, key):
